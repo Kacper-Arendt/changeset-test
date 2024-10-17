@@ -49,8 +49,6 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm ci:publish
-          # if your repository is using conventional commits, you should use the following option (the message can be customized)
-          # commit: 'ci: version packages'
         env:
           # GITHUB_TOKEN is required for creating a pull request and will be provided by the Github Action automatically
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
