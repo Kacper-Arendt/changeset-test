@@ -6,6 +6,8 @@ on:
       - main
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+env:
+  AZURE_TOKEN: ${{ secrets.AZURE_TOKEN }}
 
 jobs:
   release:
@@ -27,7 +29,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+      - name: Configure npm for Azure Artifacts
+        run: |
+          echo "; begin auth token" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/kacperarendt/_packaging/kacperarendt/npm/registry/:username=kacperarendt" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/kacperarendt/_packaging/kacperarendt/npm/registry/:_password=${AZURE_TOKEN}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/kacperarendt/_packaging/kacperarendt/npm/registry/:email=npm requires email to be set but doesn't use the value" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/kacperarendt/_packaging/kacperarendt/npm/:username=kacperarendt" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/kacperarendt/_packaging/kacperarendt/npm/:_password=${AZURE_TOKEN}" >> ~/.npmrc
+          echo "//pkgs.dev.azure.com/kacperarendt/_packaging/kacperarendt/npm/:email=npm requires email to be set but doesn't use the value" >> ~/.npmrc
+          echo "; end auth token" >> ~/.npmrc
 
       - name: Install Dependencies
         run: pnpm install --prod --frozen-lockfile
