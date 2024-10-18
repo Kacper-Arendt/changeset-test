@@ -1,5 +1,15 @@
 # changset-test
 
+## 3.0.0
+
+### Major Changes
+
+- [#6](https://github.com/Kacper-Arendt/changeset-test/pull/6) [`038d5d7`](https://github.com/Kacper-Arendt/changeset-test/commit/038d5d796451bc7237cef72c20e1d47e86083a34) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - s
+
+### Minor Changes
+
+- [#5](https://github.com/Kacper-Arendt/changeset-test/pull/5) [`72a7ddd`](https://github.com/Kacper-Arendt/changeset-test/commit/72a7ddd834d132d5a27c51a0e6782640acd9248e) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - sdasdas
+
 ## 2.1.0
 
 ### Minor Changes
