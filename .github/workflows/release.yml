@@ -60,3 +60,5 @@ jobs:
           git push origin $version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Debug Changesets Outputs
+        run:echo "Changesets outputs: ${{ toJson(steps.changesets.outputs) }}"
