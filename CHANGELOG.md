@@ -1,5 +1,11 @@
 # changset-test
 
+## 4.0.0
+
+### Major Changes
+
+- [#8](https://github.com/Kacper-Arendt/changeset-test/pull/8) [`661c859`](https://github.com/Kacper-Arendt/changeset-test/commit/661c8591e76b7d482f0b5e272d70b778e87feb20) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - ads
+
 ## 3.0.0
 
 ### Major Changes
