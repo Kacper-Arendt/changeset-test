@@ -27,6 +27,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'pnpm'
       - name: Configure npm for Azure Artifacts
         run: |
           echo "; begin auth token" >> ~/.npmrc
