@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: 🗃️ Enable corepack
+        run: corepack enable
+        shell: bash
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install Dependencies
+        run: pnpm install --prod --frozen-lockfile
+
+      - name: Create Release Pull Request or Publish to npm registry
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm publish
+          commit: 'ci: version packages'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 🚩 Create Git Tag
+        id: create_tag
+        if: steps.changesets.outputs.published == 'true'
+        run: |
+          version=$(pnpm changeset version)
+          git tag $version
+          git push origin $version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
