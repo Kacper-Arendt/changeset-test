@@ -1,5 +1,11 @@
 # changset-test
 
+## 10.0.0
+
+### Major Changes
+
+- [#24](https://github.com/Kacper-Arendt/changeset-test/pull/24) [`8b973ac`](https://github.com/Kacper-Arendt/changeset-test/commit/8b973acabeff398c36844afee326d9b5db72a49a) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - Add caching
+
 ## 9.0.0
 
 ### Major Changes
