@@ -1,5 +1,25 @@
 # changset-test
 
+## 7.0.0
+
+### Major Changes
+
+- [#18](https://github.com/Kacper-Arendt/changeset-test/pull/18) [`a769208`](https://github.com/Kacper-Arendt/changeset-test/commit/a76920827354174ece78a54539ddf5a4e6408f81) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - asd
+
+## 6.0.0
+
+### Major Changes
+
+- [#13](https://github.com/Kacper-Arendt/changeset-test/pull/13) [`57b3ba6`](https://github.com/Kacper-Arendt/changeset-test/commit/57b3ba6a6b803498d849cdaeef0fd3c960747f0f) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - adasdasd
+
+- [#16](https://github.com/Kacper-Arendt/changeset-test/pull/16) [`c0b8c46`](https://github.com/Kacper-Arendt/changeset-test/commit/c0b8c46c342f97ae041b64dbbbe7723f84ed04fd) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - asd
+
+- [#14](https://github.com/Kacper-Arendt/changeset-test/pull/14) [`1394a07`](https://github.com/Kacper-Arendt/changeset-test/commit/1394a07c26bd5067f7ebd80ff6867f94fc63dba8) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - asd
+
+### Patch Changes
+
+- [#15](https://github.com/Kacper-Arendt/changeset-test/pull/15) [`92da332`](https://github.com/Kacper-Arendt/changeset-test/commit/92da3323c6d8bcbbd5203cc37bcb2a8701c8a9d5) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - asd
+
 ## 5.0.0
 
 ### Major Changes
