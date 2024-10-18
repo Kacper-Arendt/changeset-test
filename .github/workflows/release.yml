@@ -47,17 +47,16 @@ jobs:
         uses: changesets/action@v1
         with:
           publish: pnpm ci:publish
-          commit: 'ci: version packages'
+          title: 'Changesets: New Release  🚀'
+          commit: 'Changesets: version packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🚩 Create Git Tag
         id: create_tag
         if: steps.changesets.outputs.hasChangesets == 'false'
-        run: |
-          version=$(pnpm changeset version)
-          git tag $version
-          git push origin $version
+        run: git push --follow-tags
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
