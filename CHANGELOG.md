@@ -1,5 +1,11 @@
 # changset-test
 
+## 8.0.0
+
+### Major Changes
+
+- [#20](https://github.com/Kacper-Arendt/changeset-test/pull/20) [`6eb29c0`](https://github.com/Kacper-Arendt/changeset-test/commit/6eb29c0fd4637575c37fa4ff2ce1f9d93f990c80) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - azure
+
 ## 7.0.0
 
 ### Major Changes
