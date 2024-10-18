@@ -1,5 +1,11 @@
 # changset-test
 
+## 5.0.0
+
+### Major Changes
+
+- [#11](https://github.com/Kacper-Arendt/changeset-test/pull/11) [`71359ff`](https://github.com/Kacper-Arendt/changeset-test/commit/71359ff7f4f13bfc52576cf9fc37bfc08c5fe422) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - turn off azure
+
 ## 4.0.0
 
 ### Major Changes
