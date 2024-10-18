@@ -1,9 +1,9 @@
-name: Release
+name: Release azure
 
 on:
   push:
     branches:
-      - master
+      - main
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 env:
@@ -11,7 +11,7 @@ env:
 
 jobs:
   release:
-    name: Release
+    name: Release azure
     runs-on: ubuntu-latest
     steps:
       - uses: pnpm/action-setup@v4
@@ -20,8 +20,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      # Corepack makes sure to use correct Node.js version for your project, it requires having "engines" specified in package.json file
-      # Read more about Corepack and advanced dependencies caching at: https://infinum.com/handbook/frontend/node/managing-node-npm-versions
       - name: 🗃️ Enable corepack
         run: corepack enable
         shell: bash
@@ -48,7 +46,7 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm exec changeset publish
+          publish: pnpm ci:publish
         env:
           # GITHUB_TOKEN is required for creating a pull request and will be provided by the Github Action automatically
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
