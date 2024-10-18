@@ -1,5 +1,13 @@
 # changset-test
 
+## 11.0.0
+
+### Major Changes
+
+- [#26](https://github.com/Kacper-Arendt/changeset-test/pull/26) [`2f6e2d3`](https://github.com/Kacper-Arendt/changeset-test/commit/2f6e2d3e3b9f1d72b2cb60c9f7c102c8377b01c1) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - asd
+
+- [#26](https://github.com/Kacper-Arendt/changeset-test/pull/26) [`0959835`](https://github.com/Kacper-Arendt/changeset-test/commit/09598358025c63b603dcbad590b7f89a333a5203) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - add utput log
+
 ## 10.0.0
 
 ### Major Changes
