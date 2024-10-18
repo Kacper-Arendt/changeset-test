@@ -53,7 +53,7 @@ jobs:
 
       - name: 🚩 Create Git Tag
         id: create_tag
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.changesets.outputs.hasChangesets == 'false'
         run: |
           version=$(pnpm changeset version)
           git tag $version
