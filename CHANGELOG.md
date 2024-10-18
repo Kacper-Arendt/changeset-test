@@ -1,5 +1,11 @@
 # changset-test
 
+## 9.0.0
+
+### Major Changes
+
+- [#22](https://github.com/Kacper-Arendt/changeset-test/pull/22) [`b555216`](https://github.com/Kacper-Arendt/changeset-test/commit/b555216da34e6addf0901c5e7f359f6ebbf619ff) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - add summary
+
 ## 8.0.0
 
 ### Major Changes
