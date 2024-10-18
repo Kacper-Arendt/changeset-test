@@ -1,5 +1,4 @@
 name: Release azure
-
 on:
   push:
     branches:
@@ -42,15 +41,21 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --prod --frozen-lockfile
 
-      - name: Create Release Pull Request or Publish to npm registry
+      - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
           publish: pnpm ci:publish
+          commit: 'ci: version packages'
         env:
-          # GITHUB_TOKEN is required for creating a pull request and will be provided by the Github Action automatically
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push git tag after publish
+      - name: 🚩 Create Git Tag
+        id: create_tag
         if: steps.changesets.outputs.published == 'true'
-        run: git push --follow-tags
+        run: |
+          version=$(pnpm changeset version)
+          git tag $version
+          git push origin $version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
