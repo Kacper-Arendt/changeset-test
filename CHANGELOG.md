@@ -1,5 +1,11 @@
 # changset-test
 
+## 13.1.0
+
+### Minor Changes
+
+- [#32](https://github.com/Kacper-Arendt/changeset-test/pull/32) [`2ddc544`](https://github.com/Kacper-Arendt/changeset-test/commit/2ddc5444a6f77d1e2b88688e16cf3485168c5218) Thanks [@Kacper-Arendt](https://github.com/Kacper-Arendt)! - test test asdas
+
 ## 13.0.0
 
 ### Major Changes
